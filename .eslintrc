@@ -1,0 +1,77 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "ignorePatterns": ["*.js"],
+  "extends": [
+    "eslint:recommended",
+    "airbnb",
+    "airbnb-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "airbnb-typescript-prettier",
+    "prettier"
+  ],
+  "plugins": ["prettier"],
+  "parserOptions": {
+    "project": ["./tsconfig.json"],
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {},
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": true,
+        "ignoreDeclarationSort": true
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-debugger": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["off"],
+    "prefer-const": "warn",
+    "react/no-array-index-key": "warn",
+    "no-empty-function": "off",
+    "no-restricted-globals": "off",
+    "no-shadow": "off",
+    "no-unused-expressions": "off",
+    "@typescript-eslint/no-unused-expressions": ["error"],
+    "@typescript-eslint/no-shadow": "error",
+    "@typescript-eslint/no-empty-function": ["off"],
+    "react/function-component-definition": "off",
+    "@typescript-eslint/dot-notation": "off",
+    "react/require-default-props": "off",
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/no-useless-path-segments": "off",
+    "import/no-named-as-default-member": "off",
+    "import/no-relative-packages": "off",
+    "import/no-self-import": "off",
+    "prefer-destructuring": "off"
+  }
+}
